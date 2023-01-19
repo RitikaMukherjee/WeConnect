@@ -13,7 +13,7 @@
         android:theme="@style/Theme.WeConnect"
         tools:targetApi="31">
         <activity
-            android:name=".SignupActivity"
+            android:name=".SigninActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -25,10 +25,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".SignupActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

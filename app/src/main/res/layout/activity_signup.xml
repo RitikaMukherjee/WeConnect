@@ -119,6 +119,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Already have an account ?"
+            android:layout_gravity="right"
+            android:textStyle="bold"
             />
 <!--        signup button-->
         <Button
@@ -128,7 +130,7 @@
             android:padding="15dp"
             android:text="Sign Up"
             android:textColor="@color/white"
-            app:cornerRadius="8dp" />
+            app:cornerRadius="8dp"/>
 
     </LinearLayout>
 

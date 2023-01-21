@@ -22,20 +22,24 @@
         android:orientation="vertical">
 <!--        logo-->
         <ImageView
+            android:id="@+id/logo"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginTop="30dp"
             android:src="@drawable/logo"/>
 <!--        user's data collection start-->
         <EditText
+            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="18dp"
             android:ems="10"
-            android:hint="Username"
+            android:hint="User name"
             android:inputType="textPersonName"
             android:padding="9dp"/>
         <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -45,6 +49,7 @@
             android:inputType="textEmailAddress"
             android:padding="9dp"/>
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -54,6 +59,7 @@
             android:inputType="textPassword"
             android:padding="9dp"/>
         <EditText
+            android:id="@+id/college"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -63,6 +69,7 @@
             android:inputType="text"
             android:padding="9dp"/>
         <EditText
+            android:id="@+id/course"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -72,6 +79,7 @@
             android:inputType="text"
             android:padding="9dp"/>
         <EditText
+            android:id="@+id/stream"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -86,6 +94,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/yoa"
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -95,6 +104,7 @@
                 android:inputType="number"
                 android:padding="9dp" />
             <EditText
+                android:id="@+id/yop"
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -105,6 +115,7 @@
                 android:padding="9dp"/>
         </LinearLayout>
         <EditText
+            android:id="@+id/company"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -116,6 +127,7 @@
 <!--        user's data collection end-->
 <!--        redirecting to login-->
         <TextView
+            android:id="@+id/gotosignin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Already have an account ?"
@@ -124,6 +136,7 @@
             />
 <!--        signup button-->
         <Button
+            android:id="@+id/submit"
             android:layout_width="150dp"
             android:layout_height="68dp"
             android:layout_marginTop="10dp"

@@ -135,12 +135,13 @@
                 android:inputType="text"
                 android:padding="9dp"/>
             <TextView
+                android:id="@+id/signinTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:layout_gravity="right"
                 android:textSize="16sp"
-                android:text="Already have an account?"
+                android:text="Already have account?"
                 android:textStyle="bold"/>
             <Button
                 android:id="@+id/signupBtn"

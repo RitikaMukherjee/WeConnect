@@ -23,6 +23,7 @@
             android:src="@drawable/logo"/>
 <!--        fields to get user's data start-->
         <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -32,6 +33,7 @@
             android:inputType="textEmailAddress"
             android:padding="9dp" />
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -43,6 +45,7 @@
 <!--        fields to get user's data end-->
 <!--        redirecting to signup page-->
         <TextView
+            android:id="@+id/signupTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
@@ -52,12 +55,28 @@
             android:textStyle="bold"/>
 <!--        sign in button-->
         <Button
+            android:id="@+id/signinBtn"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:padding="15dp"
             android:text="Sign in"
             app:cornerRadius="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or\n\nSign in with Google"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"/>
+        <ImageButton
+            android:id="@+id/googleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_google"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
 
     </LinearLayout>
 

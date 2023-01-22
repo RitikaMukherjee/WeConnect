@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                                 database.getReference().child("Users").child(id).setValue(user);
                                 Toast.makeText(MainActivity.this, "User is signed up successfully", Toast.LENGTH_SHORT).show();
                             }else{
-                                Toast.makeText(MainActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                             }
                         }
                     });
@@ -62,6 +63,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+        binding.signinTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,SigninActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -62,21 +62,21 @@
             android:padding="15dp"
             android:text="Sign in"
             app:cornerRadius="8dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="or\n\nSign in with Google"
-            android:textSize="15sp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"/>
-        <ImageButton
-            android:id="@+id/googleBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_google"
-            android:background="@color/white"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="or\n\nSign in with Google"-->
+<!--            android:textSize="15sp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:gravity="center"/>-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/googleBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_google"-->
+<!--            android:background="@color/white"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="10dp"/>-->
 
     </LinearLayout>
 

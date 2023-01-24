@@ -1,17 +1,16 @@
 package com.example.weconnect;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.weconnect.Models.Users;
 import com.example.weconnect.databinding.ActivityMainBinding;
-import com.example.weconnect.databinding.ActivitySigninBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -53,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
                                 String id= task.getResult().getUser().getUid();
                                 database.getReference().child("Users").child(id).setValue(user);
                                 Toast.makeText(MainActivity.this, "User is signed up successfully", Toast.LENGTH_SHORT).show();
+                                Intent intent=new Intent(MainActivity.this,UserlistActivity.class);
+                                startActivity(intent);
                             }else{
                                 Toast.makeText(MainActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                             }

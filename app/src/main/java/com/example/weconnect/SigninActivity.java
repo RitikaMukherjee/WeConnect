@@ -1,13 +1,13 @@
 package com.example.weconnect;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.weconnect.databinding.ActivitySigninBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,7 +21,7 @@ public class SigninActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     FirebaseAuth mAuth;
     FirebaseDatabase firebaseDatabase;
-
+//    GoogleSignInClient mGoogleSignInClient;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +35,21 @@ public class SigninActivity extends AppCompatActivity {
         progressDialog=new ProgressDialog(SigninActivity.this);
         progressDialog.setTitle("Logging in");
         progressDialog.setMessage("Please wait\nnvalidation in progress");
+
+
+//        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+//                .requestIdToken("57181989795-ukgvjlsh7cdm9gqqljgfju0dho3qshnd.apps.googleusercontent.com")
+//                .requestEmail()
+//                .build();
+//        mGoogleSignInClient = GoogleSignIn.getClient(this,gso);
+//
+//        binding.googleBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                signIn();
+//            }
+//        });
+
         binding.signinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,4 +86,5 @@ public class SigninActivity extends AppCompatActivity {
             }
         });
     }
+
 }

@@ -67,7 +67,8 @@
                 android:ems="10"
                 android:hint="College name"
                 android:inputType="text"
-                android:padding="9dp"/>
+                android:padding="9dp"
+                android:textAllCaps="true"/>
             <EditText
                 android:id="@+id/course"
                 android:layout_width="match_parent"

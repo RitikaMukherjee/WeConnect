@@ -85,10 +85,13 @@ public class ChatsFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 list.clear();
+                String col=snapshot.child(FirebaseAuth.getInstance().getUid()).child("college").getValue(String.class);
+//                binding.txt.setText(col);
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
                     Users users=dataSnapshot.getValue(Users.class);
                     users.setUserId(dataSnapshot.getKey());
-                    if(!users.getUserId().equals(FirebaseAuth.getInstance().getUid())){
+                    users.setCollege(dataSnapshot.child("college").getValue(String.class));
+                    if(!users.getUserId().equals(FirebaseAuth.getInstance().getUid())&&users.getCollege().equals(col)){
                         list.add(users);
                     }
                 }

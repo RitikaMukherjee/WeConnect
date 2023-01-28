@@ -1,11 +1,11 @@
 package com.example.weconnect.Models;
 
 public class Users {
-    String userId,userName,profilePic,email,password,college,course,stream,yoa,yop,company,linkedin;
+    String userId,userName,profilePic,email,password,college,course,stream,yoa,yop,company,linkedin,about;
 
     public Users() {
     }
-    public Users(String userId, String userName, String profilePic, String email, String password, String college, String course, String stream, String yoa, String yop, String company, String linkedin) {
+    public Users(String userId, String userName, String profilePic, String email, String password, String college, String course, String stream, String yoa, String yop, String company, String linkedin,String about) {
         this.userId = userId;
         this.userName = userName;
         this.profilePic = profilePic;
@@ -18,6 +18,7 @@ public class Users {
         this.yop = yop;
         this.company = company;
         this.linkedin = linkedin;
+        this.about = about;
     }
     public Users(String userName, String email, String password, String college, String course, String stream, String yoa, String yop, String company, String linkedin) {
         this.userId = userId;
@@ -127,5 +128,12 @@ public class Users {
 
     public void setLinkedin(String linkedin) {
         this.linkedin = linkedin;
+    }
+    public String getAbout() {
+        return about;
+    }
+
+    public void setAbout(String about) {
+        this.about = about;
     }
 }

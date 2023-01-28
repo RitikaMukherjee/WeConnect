@@ -224,6 +224,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Save"
+            android:id="@+id/saveBtn"
             android:layout_marginTop="5dp"
             app:cornerRadius="8dp"/>
     </LinearLayout>

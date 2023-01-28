@@ -45,7 +45,9 @@ public class UserlistActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.settings:
-                Toast.makeText(this, "settings is clicked", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "settings is clicked", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(UserlistActivity.this,SettingsActivity.class);
+                startActivity(intent);
                 break;
             case R.id.shareConcerns:
                 Toast.makeText(this, "share concerns is clicked", Toast.LENGTH_SHORT).show();
@@ -53,8 +55,8 @@ public class UserlistActivity extends AppCompatActivity {
             case R.id.logout:
 //                Toast.makeText(this, "logout is clicked", Toast.LENGTH_SHORT).show();
                 mAuth.signOut();
-                Intent intent=new Intent(UserlistActivity.this,SigninActivity.class);
-                startActivity(intent);
+                Intent intent1=new Intent(UserlistActivity.this,SigninActivity.class);
+                startActivity(intent1);
                 break;
         }
         return super.onOptionsItemSelected(item);

@@ -73,6 +73,13 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder>{
                 intent.putExtra("userId",users.getUserId());
                 intent.putExtra("profilePic",users.getProfilePic());
                 intent.putExtra("userName",users.getUserName());
+                intent.putExtra("course",users.getCourse());
+                intent.putExtra("stream",users.getStream());
+                intent.putExtra("yoa",users.getYoa());
+                intent.putExtra("yop",users.getYop());
+                intent.putExtra("company",users.getCompany());
+                intent.putExtra("linkedin",users.getLinkedin());
+                intent.putExtra("about",users.getAbout());
                 context.startActivity(intent);
             }
         });

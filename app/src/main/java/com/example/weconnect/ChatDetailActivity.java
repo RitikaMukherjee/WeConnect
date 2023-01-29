@@ -41,9 +41,17 @@ public class ChatDetailActivity extends AppCompatActivity {
         String receiverId=getIntent().getStringExtra("userId");
         String userName=getIntent().getStringExtra("userName");
         String profilePic=getIntent().getStringExtra("profilePic");
+        String course=getIntent().getStringExtra("course");
+        String stream=getIntent().getStringExtra("stream");
+        String yoa=getIntent().getStringExtra("yoa");
+        String yop=getIntent().getStringExtra("yop");
+        String company=getIntent().getStringExtra("company");
+        String linkedin=getIntent().getStringExtra("linkedin");
+        String about=getIntent().getStringExtra("about");
 
         binding.userName.setText(userName);
         Picasso.get().load(profilePic).placeholder(R.drawable.avatar3).into(binding.profilePic);
+
         binding.backarrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,6 +111,40 @@ public class ChatDetailActivity extends AppCompatActivity {
                                         });
                             }
                         });
+            }
+        });
+        binding.profilePic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(ChatDetailActivity.this, ProfileActivity.class);
+                intent.putExtra("userId",receiverId);
+                intent.putExtra("profilePic",profilePic);
+                intent.putExtra("userName",userName);
+                intent.putExtra("course",course);
+                intent.putExtra("stream",stream);
+                intent.putExtra("yoa",yoa);
+                intent.putExtra("yop",yop);
+                intent.putExtra("company",company);
+                intent.putExtra("linkedin",linkedin);
+                intent.putExtra("about",about);
+                startActivity(intent);
+            }
+        });
+        binding.userName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(ChatDetailActivity.this,ProfileActivity.class);
+                intent.putExtra("userId",receiverId);
+                intent.putExtra("profilePic",profilePic);
+                intent.putExtra("userName",userName);
+                intent.putExtra("course",course);
+                intent.putExtra("stream",stream);
+                intent.putExtra("yoa",yoa);
+                intent.putExtra("yop",yop);
+                intent.putExtra("company",company);
+                intent.putExtra("linkedin",linkedin);
+                intent.putExtra("about",about);
+                startActivity(intent);
             }
         });
     }

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,7 +49,9 @@ public class UserlistActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.shareConcerns:
-                Toast.makeText(this, "share concerns is clicked", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "share concerns is clicked", Toast.LENGTH_SHORT).show();
+                Intent intent2=new Intent(UserlistActivity.this,ConsernActivity.class);
+                startActivity(intent2);
                 break;
             case R.id.logout:
 //                Toast.makeText(this, "logout is clicked", Toast.LENGTH_SHORT).show();

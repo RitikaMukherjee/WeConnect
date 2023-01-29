@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConsernActivity"
+    android:background="@drawable/bgimage">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share your conserns with us"
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:background="@color/white"
+            app:cornerRadius="20dp"
+            android:id="@+id/cntxt"
+            android:hint="Type your conserns here"
+            android:gravity="top"
+            android:ems="200"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Submit"
+            android:id="@+id/submit"/>
+
+    </LinearLayout>
+
+</LinearLayout>

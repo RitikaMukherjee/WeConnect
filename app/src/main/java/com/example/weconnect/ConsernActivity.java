@@ -24,6 +24,14 @@ public class ConsernActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sendMail();
+                binding.cntxt.setText("");
+            }
+        });
+        binding.backarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(ConsernActivity.this,UserlistActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -32,7 +40,7 @@ public class ConsernActivity extends AppCompatActivity {
         String id=auth.getUid();
         String recipient=database.getReference().child("Users").child(id).child("email").get().toString();
         String subject="Share Concern";
-        String message=binding.cntxt.getText().toString()+" from id: "+id;
+        String message=binding.cntxt.getText().toString()+"\n from id: "+id;
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("plain/text");
         intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "rima.snt99@gmail.com" });

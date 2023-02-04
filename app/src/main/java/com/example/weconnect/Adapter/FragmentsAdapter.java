@@ -37,7 +37,7 @@ public class FragmentsAdapter extends FragmentPagerAdapter {
             title="CHATS";
         }
         if(position==1){
-            title="RAISE QUERY";
+            title="";
         }
         return title;
     }

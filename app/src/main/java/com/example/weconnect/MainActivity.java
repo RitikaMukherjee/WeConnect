@@ -13,14 +13,14 @@ import com.example.weconnect.Models.Users;
 import com.example.weconnect.databinding.ActivityMainBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.auth.AuthResult;//for database integration
+import com.google.firebase.auth.FirebaseAuth;//for database integration
+import com.google.firebase.database.FirebaseDatabase;//for database integration
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     private FirebaseAuth mAuth;
-    FirebaseDatabase database;
+    FirebaseDatabase database;//for database integration
     ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         binding=ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        mAuth=FirebaseAuth.getInstance();
-        database=FirebaseDatabase.getInstance();
+        mAuth=FirebaseAuth.getInstance();//new database instance is created
+        database=FirebaseDatabase.getInstance();//new database instance is created
 
         progressDialog=new ProgressDialog(MainActivity.this);
         progressDialog.setTitle("Creating Account");
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 Users user=new Users(binding.username.getText().toString(),binding.email.getText().toString(),binding.password.getText().toString(),binding.college.getText().toString(),binding.course.getText().toString(),binding.stream.getText().toString(),binding.yoa.getText().toString(),binding.yop.getText().toString(),binding.company.getText().toString(),binding.linkedin.getText().toString());
                                 String id= task.getResult().getUser().getUid();
-                                database.getReference().child("Users").child(id).setValue(user);
+                                database.getReference().child("Users").child(id).setValue(user);//new record is created into database
                                 Toast.makeText(MainActivity.this, "User is signed up successfully", Toast.LENGTH_SHORT).show();
                                 Intent intent=new Intent(MainActivity.this,UserlistActivity.class);
                                 startActivity(intent);

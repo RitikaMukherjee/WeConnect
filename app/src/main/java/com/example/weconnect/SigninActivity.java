@@ -16,7 +16,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class SigninActivity extends AppCompatActivity {
+public class SigninActivity extends AppCompatActivity {//extending AppCompatActivity for inheriting its methods that shows inheritance
     ActivitySigninBinding binding;
     ProgressDialog progressDialog;
     FirebaseAuth mAuth;
@@ -24,7 +24,7 @@ public class SigninActivity extends AppCompatActivity {
 //    GoogleSignInClient mGoogleSignInClient;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);//inheting the methods ofsuper class
         setContentView(R.layout.activity_signin);
         getSupportActionBar().hide();//to hide the top bar
 

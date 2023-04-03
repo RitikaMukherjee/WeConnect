@@ -53,6 +53,7 @@ public class SigninActivity extends AppCompatActivity {//extending AppCompatActi
         binding.signinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //validation check
                 if(!binding.email.getText().toString().isEmpty()&&!binding.password.getText().toString().isEmpty()){
                     progressDialog.show();
                     mAuth.signInWithEmailAndPassword(binding.email.getText().toString(),binding.password.getText().toString())
@@ -72,6 +73,7 @@ public class SigninActivity extends AppCompatActivity {//extending AppCompatActi
                 else {
                     Toast.makeText(SigninActivity.this,"Enter valid credentials",Toast.LENGTH_SHORT).show();
                 }
+                //validation check
             }
         });
         if(mAuth.getCurrentUser()!=null){

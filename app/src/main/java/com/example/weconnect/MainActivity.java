@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         binding.signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //error handling is done by considering several test cases when user gives wrong sign up data
                 if(!binding.username.toString().isEmpty()&&!binding.password.toString().isEmpty()&&!binding.email.toString().isEmpty()&&!binding.college.toString().isEmpty()&&!binding.course.toString().isEmpty()&&!binding.stream.toString().isEmpty()&&!binding.yoa.toString().isEmpty()&&!binding.yop.toString().isEmpty()&&!binding.company.toString().isEmpty()&&!binding.linkedin.toString().isEmpty()){
                     progressDialog.show();
                     mAuth.createUserWithEmailAndPassword(binding.email.getText().toString(),binding.password.getText().toString())
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 }else {
                     Toast.makeText(MainActivity.this, "Enter valid credentials", Toast.LENGTH_SHORT).show();
                 }
+                //error handling is done by considering several test cases when user gives wrong sign up data
             }
         });
         binding.signinTxt.setOnClickListener(new View.OnClickListener() {

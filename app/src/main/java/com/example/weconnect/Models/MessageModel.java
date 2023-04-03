@@ -4,12 +4,12 @@ public class MessageModel {
     Private String uId,message,messageId;// creating private variables to ensure data hiding
     Private long timestamp;// creating private variables to ensure data hiding
 
-    public MessageModel(String uId, String message) {//constructors created
+    public MessageModel(String uId, String message) {//constructors overloading (compile time pollymorphism)
         this.uId = uId;
         this.message = message;
     }
 
-    public MessageModel(String uId, String message, Long timestamp) {//constructors created
+    public MessageModel(String uId, String message, Long timestamp) {//constructors overloading (compile time pollymorphism)
         this.uId = uId;
         this.message = message;
         this.timestamp = timestamp;

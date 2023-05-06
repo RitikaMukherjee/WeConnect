@@ -35,21 +35,7 @@ public class SigninActivity extends AppCompatActivity {//extending AppCompatActi
         progressDialog=new ProgressDialog(SigninActivity.this);
         progressDialog.setTitle("Logging in");
         progressDialog.setMessage("Please wait\nnvalidation in progress");
-
-
-//        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-//                .requestIdToken("57181989795-ukgvjlsh7cdm9gqqljgfju0dho3qshnd.apps.googleusercontent.com")
-//                .requestEmail()
-//                .build();
-//        mGoogleSignInClient = GoogleSignIn.getClient(this,gso);
-//
-//        binding.googleBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                signIn();
-//            }
-//        });
-
+        
         binding.signinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
